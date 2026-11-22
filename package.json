@@ -5,7 +5,7 @@
   "type": "module",
   "main": "./src/index.js",
   "bin": {
-    "lockvet": "./bin/lockvet.js"
+    "lockvet": "bin/lockvet.js"
   },
   "exports": {
     ".": "./src/index.js",
