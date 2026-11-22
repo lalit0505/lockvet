@@ -1,0 +1,51 @@
+{
+  "name": "lockvet",
+  "version": "1.0.0",
+  "description": "Fast offline npm lockfile inspector and hygiene triaging CLI and library",
+  "type": "module",
+  "main": "./src/index.js",
+  "bin": {
+    "lockvet": "./bin/lockvet.js"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "keywords": [
+    "npm",
+    "lockfile",
+    "package-lock",
+    "deprecated",
+    "audit",
+    "dependencies",
+    "cli",
+    "supply-chain"
+  ],
+  "author": "Lalit Mittal <lalit10565249@gmail.com>",
+  "license": "MIT",
+  "sideEffects": false,
+  "scripts": {
+    "test": "node --test test/**/*.test.js",
+    "lint": "eslint .",
+    "format:check": "prettier --check .",
+    "format": "prettier --write .",
+    "pack:check": "npm pack --dry-run",
+    "prepublishOnly": "npm run lint && npm run format:check && npm test"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "eslint": "^9.20.0",
+    "globals": "^15.14.0",
+    "prettier": "^3.5.1"
+  }
+}
